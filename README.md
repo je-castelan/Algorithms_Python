@@ -12,5 +12,10 @@ Challenge are found on the following media
 
  Some important notes
  ====================
- - You can check an array making a `window` in order to avoid a second checking which could increase the complexity
- - It's better to use `pointer` which checks from the begining and end, than modify arrays
+ - Prior of algoritm selection than I learned istrying to check the following order:
+    - Mathematic solution (if exist or know)
+    - Sort and/or search well-known algoritms
+    - Window method: in order to avoid a second checking which could increase the complexity
+    - Check list with pointers which checks from the begining and end (try not to modify array)
+    - Use hashmap (it will increase complex space but reduce complex time)
+    - As last resource, iterate.
