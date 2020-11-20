@@ -3,6 +3,14 @@ class Node:
     def __init__(self, value, next):
         self.value = value
         self.next = next
+    
+    def printList(self):
+        mylist = self
+        result = ""
+        while mylist:
+            result +=  "{} -> ".format(mylist.value)
+            mylist = mylist.next
+        return result
 
 class SingleLinkedList:
     def __init__(self, head):
