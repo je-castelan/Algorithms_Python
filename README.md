@@ -18,4 +18,5 @@ Challenge are found on the following media
     - Window method: in order to avoid a second checking which could increase the complexity
     - Check list with pointers which checks from the begining and end (try not to modify array)
     - Use hashmap (it will increase complex space but reduce complex time)
-    - As last resource, iterate.
+    - As last resource, iterate
+      - If you don't know how many times iterate, try to use recursive (and also temporaly pointers and variables on the same object in order to not lose control)
