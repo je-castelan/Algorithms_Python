@@ -6,35 +6,26 @@ Return all possible palindrome partitioning of s.
 
 class Solution(object):
     """
-    ADVICE: This isn't my response. I admit than I haven't defined myself the solution
+    I got based on the couse solution
     """
-    def isPalin(self, seg):
-        i = 0
-        j = len(seg)-1
-        while(i < j):
-            if(seg[i] != seg[j]):
-                return False
-            i += 1
-            j -= 1
-        return True
 
-    def dfs(self, s):
-        if(len(s) == 0 and len(self.temp) > 0):
-            self.res.append(self.temp[:])
-            return
-        n = len(s)+1
-        for i in range(1, n):
-            seg = s[0:i]
-            if(self.isPalin(seg)):
-                self.temp.append(seg)
-                self.dfs(s[i:])
-                self.temp.pop()
+    def makePartitions(self, word):
+        if len(word) == 0:
+            self.solution.append(self.tmp[:])
+        else:
+            for x in range(1, len(word) + 1):
+                part = word[0:x]
+                if part == part[::-1]:
+                    self.tmp.append(part)
+                    self.makePartitions(word[x::])
+                    self.tmp.pop()
 
-    def partition(self, s: str):
-        self.res = []
-        self.temp = []
-        self.dfs(s)
-        return self.res
+
+    def partition(self, word):
+        self.solution = []
+        self.tmp = []
+        self.makePartitions(word)
+        return self.solution
 
 if __name__ == "__main__":
     s = Solution()
