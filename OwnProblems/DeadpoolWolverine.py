@@ -2,6 +2,10 @@
 import random
 import time
 
+# Challenge proposed by Mouredev in the following URL
+# https://www.linkedin.com/posts/braismoure_nuevo-reto-de-programaci%C3%B3n-publicado-activity-7226317415150743552-WeMm?utm_source=share&utm_medium=member_desktop
+
+
 class RandomGenerator:
     @staticmethod
     def getAttackPower(min: int, max: int) -> int :
